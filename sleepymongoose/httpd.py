@@ -72,7 +72,7 @@ class MongoHTTPRequest(BaseHTTPRequestHandler):
 
     docroot = "."
     mongos = []
-    response_headers = []
+    response_headers = [['Access-Control-Allow-Origin','*']]
     jsonp_callback = None;
 
     def _parse_call(self, uri):
